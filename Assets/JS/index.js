@@ -95,9 +95,6 @@ $('#clientCarousel').owlCarousel({
       767:{
           items:2
       },
-      // 1024:{
-      //     items:3
-      // }
   }
     
 })
@@ -109,7 +106,6 @@ $('#clientCarousel').owlCarousel({
 /* Start Counter*/
 //start fire the function one section before
 var counter = documentHTML.getElementById("counter");
-
 var speed = 10;
 
 function incEltNbr(element) {
@@ -239,6 +235,8 @@ const mixer = mixitup('.portfolio__container',{
 }
 });
 }
+
+
 /* Link active portfolio */ 
 var numberButtons = document.querySelectorAll(".portfolio__item")
 for (var i = 0; i < numberButtons.length; i++) {
@@ -277,22 +275,15 @@ window.addEventListener("scroll", function () {
   scrollShowLookUpBtn();
 });
 
-// documentHTML.addEventListener("DOMContentLoaded", function () {
-//   strokColor.setAttribute('stroke','#f44336');
-//   progressBarValue(95);
-// });
-
 window.addEventListener("scroll", function () {
   var place = document.body.scrollTop || document.documentElement.scrollTop;
   var alertOn = SkillsC.offsetTop;
   if (place > alertOn) {
-    //alert('Function execute here');
-    /*Call this funtion with the ID-name for that element to increase the number within*/
-    // strokColor[1].setAttribute('stroke','#f44336');
-    // strokColor[2].setAttribute('stroke','#f44336');
     for(var i =0; i<strokColor.length; i++){
       strokColor[i].setAttribute('stroke','#f44336');
-    }
+    } 
+    
+    //progressBarValue(97,bootNumberInsideCircle,svgCircle[3]);
     //progressBarValue(+(htmlNumberInsideCircle.innerText.replace("%",' ')),htmlNumberInsideCircle,svgCircle[0]);
     progressBarValue(+(htmlNumberInsideCircle.getAttribute('data-value')),htmlNumberInsideCircle,svgCircle[0]);
     progressBarValue(+(cssNumberInsideCircle.getAttribute('data-value')),cssNumberInsideCircle,svgCircle[1]);
@@ -301,8 +292,7 @@ window.addEventListener("scroll", function () {
     progressBarValue(+(jsNumberInsideCircle.getAttribute('data-value')),jsNumberInsideCircle,svgCircle[4]);
     progressBarValue(+(jqNumberInsideCircle.getAttribute('data-value')),jqNumberInsideCircle,svgCircle[5]);
     progressBarValue(+(angNumberInsideCircle.getAttribute('data-value')),angNumberInsideCircle,svgCircle[6]);
-    //progressBarValue(97,bootNumberInsideCircle,svgCircle[3]);
-
+   
     this.removeEventListener("scroll", arguments.callee, false);
   }
 });
