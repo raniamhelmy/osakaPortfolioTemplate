@@ -280,7 +280,10 @@ window.addEventListener("scroll", function () {
   var alertOn = SkillsC.offsetTop;
   if (place > alertOn) {
     for(var i =0; i<strokColor.length; i++){
-      strokColor[i].setAttribute('stroke','#f44336');
+      //strokColor[i].setAttribute('stroke','#f44336');
+      var strokeIColor = getComputedStyle(document.body).getPropertyValue('--secondText__color')
+      strokColor[i].setAttribute('stroke',strokeIColor);
+      strokColor[i].setAttribute('stroke-width','24');
     } 
     
     //progressBarValue(97,bootNumberInsideCircle,svgCircle[3]);
